@@ -1,0 +1,4 @@
+#!/bin/sh
+
+java -cp dist/common/harmonia.jar:lib/jcalendar-1.3.3.jar:lib/microba-0.4.4.3.jar harmonia.App
+

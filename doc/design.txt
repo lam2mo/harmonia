@@ -1,0 +1,102 @@
+enum Key {
+  A,   F#m, Gbm,
+  A#,  Bb,  Gm,
+  B,   G#m, Abm,
+  C,   Am,
+  C#,  Db,  Bbm, A#m,
+  D,   Bm,
+  D#,  Eb,  Cm,
+  E,   C#m, Dbm,
+  F,   Dm,
+  F#,  Gb,  Ebm, D#m,
+  G,   Em,
+  G#,  Ab,  Fm
+}
+
+
+enum AttachmentType {
+  UNKNOWN,
+  PLAINTEXT,
+  RICHTEXT,
+  HTML,
+  PDF,
+  IMAGE
+}
+
+
+
+
+Song
+  - name       : String
+  - aliases    : String[]
+  - authors    : String[]
+  - year       : Integer
+  - copyright  : String
+
+  - key        : Key (primary key)
+  - length     : Integer (sec)
+  - tempo      : Integer (bpm)
+  - meter      : Integer[2]
+
+  - added      : Date
+  - comment    : String
+  - tags       : String[]
+  - properties : String => String
+  - music      : Attachment[]
+  - lyrics     : Attachment[]
+
+
+Attachment
+  - added      : Date
+  - comment    : String
+  - type       : AttachmentType
+  - data       : Byte[]
+
+
+SongSetItem
+  - song       : Song
+  - key        : Key (primary key)
+  - repeats    : Integer
+  - comment    : String
+
+
+SongSet
+  - name       : String
+  - created    : Date
+  - comment    : String
+  - songs      : SongSetItem[]
+
+
+Service
+  - date       : Date
+  - venue      : String
+  - comment    : String
+  - sets       : SongSet[]
+
+
+
+Interface:
+  - SongEditor
+  - AttachmentEditor
+  - SongSetEditor
+  - ServiceWizard
+  - SeasonEditor  (grid of services by song)
+
+
+
+
+
+
+Song		Piece
+Author		Composer
+
+
+
+
+
+
+
+
+
+
+

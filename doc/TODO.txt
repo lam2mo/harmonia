@@ -1,0 +1,13 @@
+Features:
+  - aliases in song lists (new SongStub class?)
+  - "total" column in table view
+  - igracemusic importer
+  - "song" => "piece" and "author" => "composer" option
+
+
+File types:
+  - PDF support
+  - PNG/JPG/TIFF support
+  - MP3 support
+  - scanner support
+
